@@ -12,9 +12,12 @@ from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.label import MDLabel
 from kivy.properties import NumericProperty, StringProperty
 from kivy.animation import Animation
+from kivy.utils import platform
+import random
 
 # PC ekranında telefon görünümü taklidi
-Window.size = (400, 750)
+if platform != 'android' and platform != 'ios':
+    Window.size = (400, 750)
 
 KV = '''
 #:import get_color_from_hex kivy.utils.get_color_from_hex
