@@ -36,8 +36,10 @@ jobs:
           sudo apt install -y build-essential libltdl-dev libffi-dev libssl-dev python3-setuptools libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavutil-dev
           sudo apt install -y swig lld doxygen unzip zip
 
-      - name: Build Android Release (AAB & APK)
-        run: yes | buildozer android release
+      - name: Build Android Release (AAB) & Debug (APK)
+        run: |
+          yes | buildozer android release
+          yes | buildozer android debug
 
       - name: Upload Build Artifacts (APK & AAB)
         uses: actions/upload-artifact@v4
