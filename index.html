@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>KPSS Master Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Ionicons for premium icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="app-view active splash-bg">
+        <div class="splash-content">
+            <div class="logo-circle">
+                <ion-icon name="ribbon"></ion-icon>
+            </div>
+            <h1 class="brand-title">KPSS <span>Master Pro</span></h1>
+            <p class="brand-subtitle">Geleceğiniz için en iyisi</p>
+        </div>
+        <div class="splash-loader">
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+        </div>
+    </div>
+
+    <!-- Main Application Container -->
+    <div id="main-app" class="app-view">
+
+        <!-- Tab: Home -->
+        <main id="tab-home" class="tab-content active">
+            <div class="header-premium">
+                <div class="user-info">
+                    <p class="greeting">İyi çalışmalar, <span class="wave">👋</span></p>
+                    <h2 class="user-name">Alperen</h2>
+                </div>
+                <div class="header-actions">
+                    <button class="icon-button notification-btn">
+                        <ion-icon name="notifications-outline"></ion-icon>
+                        <span class="badge">2</span>
+                    </button>
+                    <div class="profile-avatar">
+                        <img src="https://ui-avatars.com/api/?name=Alperen&background=6366f1&color=fff&rounded=true&bold=true"
+                            alt="Profile">
+                    </div>
+                </div>
+            </div>
+
+            <div class="premium-banner">
+                <div class="banner-content">
+                    <h3>Pro Ayrıcalıklarını Keşfet</h3>
+                    <p>Sınırsız deneme, detaylı analiz ve reklamsız deneyim için yükseltin.</p>
+                    <button class="btn-upgrade">Sadece 9,99 ₺ <ion-icon name="chevron-forward"></ion-icon></button>
+                </div>
+                <div class="banner-icon">
+                    <ion-icon name="star"></ion-icon>
+                </div>
+            </div>
+
+            <div class="section-title">
+                <h3>Deneme Sınavları</h3>
+                <a href="#" class="view-all">Tümünü Gör</a>
+            </div>
+
+            <div class="exams-slider">
+                <div class="exam-card pro-exam" onclick="startExam(1)">
+                    <div class="exam-header">
+                        <span class="exam-tag">Türkiye Geneli</span>
+                        <ion-icon name="ellipsis-vertical"></ion-icon>
+                    </div>
+                    <div class="exam-body">
+                        <h4>KPSS Lisans Deneme 1</h4>
+                        <div class="exam-details">
+                            <span><ion-icon name="document-text-outline"></ion-icon> 120 Soru</span>
+                            <span><ion-icon name="time-outline"></ion-icon> 130 Dk</span>
+                        </div>
+                    </div>
+                    <div class="exam-footer">
+                        <div class="progress-wrap">
+                            <div class="progress-bg">
+                                <div class="progress-fill" style="width: 0%;"></div>
+                            </div>
+                            <span class="progress-text">%0 Tamamlandı</span>
+                        </div>
+                        <button class="btn-play"><ion-icon name="play"></ion-icon></button>
+                    </div>
+                </div>
+
+                <div class="exam-card locked-exam">
+                    <div class="exam-header">
+                        <span class="exam-tag locked">Pro</span>
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </div>
+                    <div class="exam-body">
+                        <h4>KPSS Lisans Deneme 2</h4>
+                        <div class="exam-details">
+                            <span><ion-icon name="document-text-outline"></ion-icon> 120 Soru</span>
+                            <span><ion-icon name="time-outline"></ion-icon> 130 Dk</span>
+                        </div>
+                    </div>
+                    <div class="exam-footer">
+                        <button class="btn-buy-unlock">Kilidi Aç</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title mt-4">
+                <h3>Günlük İstatistikler</h3>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon purple-light"><ion-icon name="checkmark-circle"></ion-icon></div>
+                    <div class="stat-info">
+                        <h5>Çözülen</h5>
+                        <h4>0 Soru</h4>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange-light"><ion-icon name="flame"></ion-icon></div>
+                    <div class="stat-info">
+                        <h5>Seri</h5>
+                        <h4>0 Gün</h4>
+                    </div>
+                </div>
+            </div>
+            <div style="height: 100px;"></div> <!-- Bottom Nav Spacing -->
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active">
+                <ion-icon name="home"></ion-icon>
+                <span>Ana Sayfa</span>
+            </a>
+            <a href="#" class="nav-item">
+                <ion-icon name="book-outline"></ion-icon>
+                <span>Konular</span>
+            </a>
+            <a href="#" class="nav-item">
+                <ion-icon name="pie-chart-outline"></ion-icon>
+                <span>Analiz</span>
+            </a>
+            <a href="#" class="nav-item">
+                <ion-icon name="person-outline"></ion-icon>
+                <span>Profil</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Exam Interface (Full Screen Overlay) -->
+    <div id="exam-interface" class="app-view slide-up">
+        <header class="exam-topnav glass-effect">
+            <button class="icon-btn" onclick="quitExamPrompt()"><ion-icon name="chevron-back"></ion-icon></button>
+            <div class="exam-timer" id="timer-box">
+                <ion-icon name="time-outline"></ion-icon>
+                <span id="time-display">130:00</span>
+            </div>
+            <button class="icon-btn" onclick="toggleOpticForm()"><ion-icon name="grid-outline"></ion-icon></button>
+        </header>
+
+        <div class="exam-progress-bar">
+            <div class="fill" id="question-progress" style="width: 1%;"></div>
+        </div>
+
+        <div class="question-scroll-area">
+            <div class="question-card">
+                <div class="q-header">
+                    <span class="q-badge" id="q-category">Genel Yetenek - Türkçe</span>
+                    <span class="q-badge-number" id="q-number">Soru 1 / 120</span>
+                </div>
+
+                <h3 class="q-text" id="q-text">Soru metni yükleniyor...</h3>
+
+                <div class="q-options" id="options-container">
+                    <!-- Options injected here -->
+                </div>
+            </div>
+        </div>
+
+        <footer class="exam-bottomnav glass-effect">
+            <button id="prev-btn" class="nav-btn ghost"><ion-icon name="arrow-back"></ion-icon> Önceki</button>
+            <button id="finish-btn" class="nav-btn danger hide" onclick="finishExamPrompt()">Bitir <ion-icon
+                    name="flag"></ion-icon></button>
+            <button id="next-btn" class="nav-btn primary">Sonraki <ion-icon name="arrow-forward"></ion-icon></button>
+        </footer>
+
+        <!-- Optic Form Drawer -->
+        <div id="optic-drawer" class="drawer">
+            <div class="drawer-header">
+                <h3>Optik Form</h3>
+                <button class="close-btn" onclick="toggleOpticForm()"><ion-icon name="close-circle"></ion-icon></button>
+            </div>
+            <div class="drawer-content">
+                <div class="optic-legend">
+                    <span class="leg-item">
+                        <div class="dot answered"></div> Çözüldü
+                    </span>
+                    <span class="leg-item">
+                        <div class="dot current"></div> Şu an
+                    </span>
+                    <span class="leg-item">
+                        <div class="dot empty"></div> Boş
+                    </span>
+                </div>
+                <div class="optic-grid" id="optic-grid">
+                    <!-- Buttons injected via JS -->
+                </div>
+                <button class="btn-finish-exam-large" onclick="finishExamPrompt()">Sınavı Tamamla</button>
+            </div>
+        </div>
+        <div class="drawer-backdrop" id="drawer-backdrop" onclick="toggleOpticForm()"></div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="result-screen" class="app-view bg-surface">
+        <header class="result-header">
+            <h2>Sınav Sonucu</h2>
+            <button class="icon-btn" onclick="returnHome()"><ion-icon name="close"></ion-icon></button>
+        </header>
+
+        <div class="result-scroll">
+            <div class="score-card-premium">
+                <div class="score-circle-wrapper">
+                    <!-- SVG Circular Progress -->
+                    <svg viewBox="0 0 36 36" class="circular-chart-pro">
+                        <path class="circle-bg"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" id="result-circle" stroke-dasharray="0, 100"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    </svg>
+                    <div class="score-text-inner">
+                        <span class="score-value" id="net-score">0</span>
+                        <span class="score-label">Net Score</span>
+                    </div>
+                </div>
+                <p class="congrats-text" id="congrats-text">Daha iyi olabilir!</p>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-box-pro type-true">
+                    <div class="sb-icon"><ion-icon name="checkmark"></ion-icon></div>
+                    <div class="sb-data">
+                        <span class="s-val" id="res-true">0</span>
+                        <span class="s-lab">Doğru</span>
+                    </div>
+                </div>
+                <div class="stat-box-pro type-false">
+                    <div class="sb-icon"><ion-icon name="close"></ion-icon></div>
+                    <div class="sb-data">
+                        <span class="s-val" id="res-false">0</span>
+                        <span class="s-lab">Yanlış</span>
+                    </div>
+                </div>
+                <div class="stat-box-pro type-blank">
+                    <div class="sb-icon"><ion-icon name="remove"></ion-icon></div>
+                    <div class="sb-data">
+                        <span class="s-val" id="res-blank">120</span>
+                        <span class="s-lab">Boş</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons-col">
+                <button class="btn-pro-primary outline" onclick="viewAnswers()"><ion-icon name="list"></ion-icon>
+                    Cevapları İncele</button>
+                <button class="btn-pro-primary" onclick="returnHome()"><ion-icon name="home"></ion-icon> Ana Menüye
+                    Dön</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="custom-modal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-icon"><ion-icon name="warning"></ion-icon></div>
+            <h3 id="modal-title">Emin misiniz?</h3>
+            <p id="modal-desc">Sınavı bitirmek istediğinize emin misiniz? Boş bıraktığınız sorular var.</p>
+            <div class="modal-actions">
+                <button class="btn-modal-cancel" id="modal-cancel">İptal</button>
+                <button class="btn-modal-confirm" id="modal-confirm">Bitir</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
